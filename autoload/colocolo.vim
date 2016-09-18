@@ -13,7 +13,7 @@ function! s:get_colorschemes() abort
 endfunction
 
 function! s:get_random_osyo(n) abort
-  return sha256(reltimestr(reltime()))[:7] % a:n
+  return ('0x'.sha256(reltimestr(reltime()))[:7]) % a:n
 endfunction
 
 function! s:choice(lst) abort
